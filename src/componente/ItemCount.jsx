@@ -17,6 +17,7 @@ export const ItemCount = ({initial, stock ,onAdd}) =>{
     },[initial])
 
     return (
+        <>
         <div className='contador'>
             <button disabled={count <=1} onClick={decrease}>-</button>
             <span>{count}</span>
@@ -25,6 +26,6 @@ export const ItemCount = ({initial, stock ,onAdd}) =>{
                 <button disabled={stock <= 0} onClick={()=> onAdd(count)}>Agregar al carro</button>
             </div>
         </div>
-
+        </>
     )
 }
